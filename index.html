@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farm2Table - Fresh From Farms</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f8f1;
+    color: #333;
+}
+
+header {
+    background: #246b45;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d7f5a5;
+}
+
+.hero {
+    background: linear-gradient(90deg, #246b45, #77a95a);
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #f5c542;
+    color: #222;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e8ad17;
+}
+
+section {
+    padding: 45px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: #246b45;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.feature-card h3 {
+    color: #246b45;
+    margin-bottom: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.controls input,
+.controls select {
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 12px #ddd;
+}
+
+.product-card .emoji {
+    font-size: 65px;
+    margin-bottom: 12px;
+}
+
+.product-card h3 {
+    color: #246b45;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 19px;
+    font-weight: bold;
+    color: #df8b16;
+    margin: 12px;
+}
+
+.product-card button {
+    background: #246b45;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: #17482d;
+}
+
+.about {
+    background: #e5f0df;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.cart-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    gap: 10px;
+}
+
+.cart-item button {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+footer {
+    background: #17482d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media(max-width:600px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🌱 Farm2Table</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#cart">Cart 🛒</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Fresh From Farm To Your Table</h1>
+    <p>Buy fresh vegetables and fruits directly from farmers.</p>
+    <button class="btn"
+    onclick="document.getElementById('products').scrollIntoView()">
+        Shop Now
+    </button>
+</section>
+
+<section>
+    <h2 class="section-title">Why Choose Farm2Table?</h2>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3>🌿 Fresh Products</h3>
+            <p>Fresh vegetables and fruits directly from farms.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>👨‍🌾 Support Farmers</h3>
+            <p>Help local farmers sell their products.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>💰 Fair Prices</h3>
+            <p>Affordable prices without unnecessary middlemen.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🚚 Easy Shopping</h3>
+            <p>Simple and convenient online shopping experience.</p>
+        </div>
+    </div>
+</section>
+
+<section id="products">
+    <h2 class="section-title">Our Fresh Products</h2>
+
+    <div class="controls">
+        <input type="text" id="search"
+        placeholder="Search products..." oninput="displayProducts()">
+
+        <select id="category" onchange="displayProducts()">
+            <option value="All">All Categories</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Fruits">Fruits</option>
+            <option value="Grains">Grains</option>
+        </select>
+
+        <select id="sort" onchange="displayProducts()">
+            <option value="default">Sort Products</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+        </select>
+    </div>
+
+    <div class="products" id="productList"></div>
+</section>
+
+<section class="about" id="about">
+    <h2 class="section-title">About Farm2Table</h2>
+    <p>
+        Farm2Table is an online agricultural marketplace that connects
+        farmers directly with customers. Our platform helps farmers
+        sell fresh products and allows customers to purchase quality
+        food at reasonable prices. We aim to reduce middlemen and
+        promote sustainable agriculture.
+    </p>
+</section>
+
+<section id="cart">
+    <h2 class="section-title">Shopping Cart</h2>
+
+    <div class="cart-box">
+        <div id="cartItems">
+            Your cart is empty.
+        </div>
+
+        <h3 id="total">Total: ₹0</h3>
+
+        <br>
+        <button class="btn" onclick="checkout()">
+            Place Order
+        </button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Farm2Table | Freshness Delivered From Farms</p>
+</footer>
+
+<script>
